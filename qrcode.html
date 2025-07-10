@@ -1,0 +1,39 @@
+<!-- qrcode.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code for AR Greeting Card</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fffafc;
+      }
+      h1 {
+        margin-bottom: 20px;
+        color: #d6336c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scan to View AR Greeting Card</h1>
+    <div id="qrcode"></div>
+
+    <script>
+      new QRCode(document.getElementById("qrcode"), {
+        text: "https://yourusername.github.io/ar-greeting-card/",
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+      });
+    </script>
+  </body>
+</html>
